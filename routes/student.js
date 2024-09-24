@@ -13,4 +13,13 @@ router.post('/add/student',(req,res)=>{
 router.get('/students',(req,res)=>{
     studentControler.getstudents(req,res)
 })
+router.get("/student/edit/page/:id",(req,res)=>{
+    studentControler.getStudentForEdit(req,res)
+})
+router.post('/update/student/:id',(req,res)=>{
+    studentControler.updateStudent(req,res)
+})
+router.get('/delete/student/:id',(req,res)=>{
+    studentControler.deleteStudent(req,res)
+})
 module.exports=router
